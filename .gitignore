@@ -13,3 +13,4 @@ venv310/venv310/
 sort.py
 train.py
 check.py
+find_git_large_files.py
