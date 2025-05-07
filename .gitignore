@@ -10,3 +10,6 @@ __pycache__/
 *.pyd
 .DS_Store
 venv310/venv310/ 
+sort.py
+train.py
+check.py
