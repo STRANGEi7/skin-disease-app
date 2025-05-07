@@ -1,0 +1,12 @@
+echo venv310/ > .gitignore
+echo __pycache__/ >> .gitignore
+echo *.pyc >> .gitignore
+venv/
+__pycache__/
+*.pyc
+venv/
+__pycache__/
+*.pyc
+*.pyd
+.DS_Store
+venv310/venv310/ 
