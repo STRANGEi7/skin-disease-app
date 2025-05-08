@@ -17,21 +17,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Serve uploaded images
-app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
+# # Serve uploaded images
+# app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
-# Serve static files (like favicon)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+# # Serve static files (like favicon)
+# app.mount("/static", StaticFiles(directory="static"), name="static")
 
-@app.get("/")
-async def root():
-    return {"message": "Welcome to the Skin Disease Recognition API!"}
+# @app.get("/")
+# async def root():
+#     return {"message": "Welcome to the Skin Disease Recognition API!"}
 
-@app.get("/favicon.ico")
-async def favicon():
-    # Adjust path to your favicon file
-    favicon_path = os.path.join("static", "favicon.ico")
-    return FileResponse(favicon_path)
+# @app.get("/favicon.ico")
+# async def favicon():
+#     # Adjust path to your favicon file
+#     favicon_path = os.path.join("static", "favicon.ico")
+#     return FileResponse(favicon_path)
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
